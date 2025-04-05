@@ -59,12 +59,15 @@ body {
 
 /* Navigation Bar */
 nav {
-    background-image: url('photos/n5.jpg'); /* <-- Replace with your actual image path */
+    background-image: url('photos/n5.jpg');
     background-size: cover;
     background-position: center;
-    height: 65px;
+    height: 70px;
     width: 100%;
     box-sizing: border-box;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+    position: relative;
+    z-index: 10;
 }
 
 .nav-container {
@@ -75,6 +78,9 @@ nav {
     padding-right: 180px;
     width: 100%;
     box-sizing: border-box;
+    background-color: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(5px);
+    height: 100%;
 }
 
 /* Logo Placement */
@@ -85,12 +91,17 @@ nav {
 
 .logo img {
     height: 60px;
-    width: 60px; /* Make width equal to height for a perfect circle */
+    width: 60px;
     display: block;
-    
-    border-radius: 50%; /* Makes it a circle */
-    border: 2px solid white; /* White border */
-    object-fit: cover; /* Ensures the image covers the area without distortion */
+    border-radius: 50%;
+    border: 2px solid white;
+    object-fit: cover;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s ease;
+}
+
+.logo img:hover {
+    transform: scale(1.05);
 }
 
 /* Navigation Links */
@@ -106,19 +117,21 @@ nav ul li {
 }
 
 nav ul li a {
-    color: rgb(0, 0, 0);
+    color: white;
     text-decoration: none;
     font-size: 19px;
     font-weight: bold;
     padding: 8px 12px;
     transition: all 0.3s ease-in-out;
     border-radius: 5px;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
 }
 
 /* Hover Effect */
 nav ul li a:hover {
-    color: #f80000;
-    text-decoration: underline;
+    color: #f8b400;
+    text-decoration: none;
+    background-color: rgba(255, 255, 255, 0.2);
 }
 
 /* Header Section */
@@ -137,14 +150,14 @@ header {
 }
 
 /* Slideshow Styling */
-/* Slideshow Styling */
 .slideshow {
     position: absolute;
     top: 0;
     left: 0;
     width: 100%;
-    height: 90vh; /* Ensure it fills the entire viewport height */
+    height: 100vh; /* Ensure it fills the entire viewport height */
     overflow: hidden;
+    z-index: 1;
 }
 
 .slideshow img {
@@ -161,6 +174,152 @@ header {
 
 .slideshow img.active {
     opacity: 1;
+}
+
+/* Add overlay to slideshow */
+.slideshow::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.5) 0%, rgba(0, 0, 0, 0.3) 50%, rgba(0, 0, 0, 0.5) 100%);
+    z-index: 2;
+}
+
+/* Main Heading */
+header h1 {
+    font-size: 82px;
+    font-weight: bold;
+    background: linear-gradient(to right, #f9822d, #feb47b, #ffdd00);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-transform: uppercase;
+    margin-bottom: 20px;
+    -webkit-text-stroke: 1px white; /* Adjust color and thickness */
+    text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.7);
+    z-index: 3; /* Ensures heading is above the slideshow */
+    animation: fadeInDown 1s ease-out;
+}
+
+header h2 {
+    font-size: 42px;
+    font-weight: bold;
+    background-color: rgba(14, 21, 78, 0.6);
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-transform: uppercase;
+    margin-bottom: 20px;
+    -webkit-text-stroke: 1px white;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
+    z-index: 3;
+    animation: fadeInUp 1s ease-out 0.3s both;
+}
+
+/* Button Styling */
+.book-button {
+    display: inline-block;
+    background-color: #f8b400;
+    color: white;
+    font-size: 20px;
+    font-weight: bold;
+    padding: 15px 30px;
+    border-radius: 5px;
+    text-decoration: none;
+    transition: all 0.3s ease-in-out;
+    z-index: 3; /* Ensure button stays above the slideshow */
+    border: 2px solid #a47900;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    animation: fadeInUp 1s ease-out 0.6s both;
+}
+
+.book-button:hover {
+    background-color: #ffcc00;
+    transform: translateY(-5px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.4);
+}
+
+/* Subtext Section */
+.header-subtext {
+    margin-top: 30px;
+    font-size: 18px;
+    display: flex;
+    gap: 30px;
+    justify-content: center;
+    flex-wrap: wrap;
+    z-index: 3;
+    animation: fadeInUp 1s ease-out 0.9s both;
+}
+
+.header-subtext span {
+    color: white;
+    background-color: rgba(253, 243, 205, 0.8);
+    padding: 12px 20px;
+    border-radius: 5px;
+    font-weight: bold;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease;
+}
+
+.header-subtext span:hover {
+    transform: translateY(-3px);
+    background-color: rgba(253, 243, 205, 0.9);
+}
+
+/* Add scroll indicator */
+.scroll-indicator {
+    position: absolute;
+    bottom: 30px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 3;
+    animation: bounce 2s infinite;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: white;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
+}
+
+.scroll-indicator i {
+    font-size: 24px;
+    margin-top: 5px;
+}
+
+/* Animations */
+@keyframes fadeInDown {
+    from {
+        opacity: 0;
+        transform: translateY(-30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes bounce {
+    0%, 20%, 50%, 80%, 100% {
+        transform: translateY(0);
+    }
+    40% {
+        transform: translateY(-10px);
+    }
+    60% {
+        transform: translateY(-5px);
+    }
 }
 
 /* Main Heading */
@@ -494,6 +653,58 @@ header::after {
     max-width: 500px;
 }
 
+/* Some of our work Section */
+.our-work {
+    padding: 60px 20px;
+    background-color: #f9f9f9;
+    text-align: center;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.our-work h2 {
+    font-size: 3rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    background: linear-gradient(45deg, #e1ce00, #ffe100, #ffd900, #c09600);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    -webkit-text-stroke: 1px black;
+    margin-bottom: 40px;
+}
+
+.work-slideshow-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    overflow: hidden;
+    position: relative;
+    padding: 20px 0;
+}
+
+.work-slideshow {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+    width: 100%;
+}
+
+.work-slide {
+    flex: 0 0 33.333%;
+    padding: 0 10px;
+    box-sizing: border-box;
+}
+
+.work-slide img {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.work-slide img:hover {
+    transform: scale(1.05);
+}
 
 /* Contact Form - Floating Window Style */
 .contact-section {
@@ -931,6 +1142,24 @@ footer {
         align-items: center;
         justify-content: center;
     }
+
+    /* Some of our work Section Improvements for Mobile */
+    .our-work {
+        padding: 40px 15px;
+    }
+
+    .our-work h2 {
+        font-size: 28px;
+        margin-bottom: 20px;
+    }
+
+    .work-slide {
+        flex: 0 0 50%;
+    }
+
+    .work-slide img {
+        height: 200px;
+    }
 }
 
 /* Additional Small Screen Optimizations */
@@ -984,6 +1213,15 @@ footer {
     .about-image::before {
         width: 250px;
         height: 300px;
+    }
+
+    /* Some of our work Section for very small screens */
+    .work-slide {
+        flex: 0 0 100%;
+    }
+
+    .work-slide img {
+        height: 180px;
     }
 }
 
@@ -1044,5 +1282,14 @@ footer {
     
     .contact-form {
         padding: 15px;
+    }
+
+    /* Some of our work Section for iPhone 14 */
+    .work-slide {
+        flex: 0 0 100%;
+    }
+
+    .work-slide img {
+        height: 180px;
     }
 }
