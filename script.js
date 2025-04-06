@@ -2,7 +2,7 @@ document.addEventListener("DOMContentLoaded", function () {
     const languageSelector = document.getElementById("language");
     
     languageSelector.addEventListener("change", function () {
-        alert("Language changed to: " + this.value);
+        // Language change handled by the onchange attribute in HTML
     });
 });
 
@@ -128,3 +128,16 @@ document.addEventListener("DOMContentLoaded", function() {
         }
     });
 });
+
+// Language switching functionality
+function changeLanguage(lang) {
+    const languageUrls = {
+        'en': 'index.html',
+        'sq': 'sq.html',
+        'mk': 'mk.html'
+    };
+    
+    if (languageUrls[lang]) {
+        window.location.href = languageUrls[lang];
+    }
+}
