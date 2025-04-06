@@ -1,8 +1,13 @@
-body {
-    font-family: Arial, sans-serif;
+html, body {
+    overflow-x: hidden;
+    width: 100%;
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
 }
 
 /* Top Bar */
@@ -75,7 +80,7 @@ nav {
     align-items: center;
     justify-content: space-between;
     margin: 0 auto;
-    padding-right: 180px;
+    padding-right: 170px;
     width: 100%;
     box-sizing: border-box;
     height: 100%;
@@ -105,7 +110,7 @@ nav {
 /* Navigation Links */
 nav ul {
     list-style: none;
-    padding-left: 400px;
+    padding-left: 300px;
     margin-left: 400px;
     display: flex;
 }
@@ -667,6 +672,7 @@ header::after {
     text-align: center;
     width: 100%;
     box-sizing: border-box;
+    overflow: hidden;
 }
 
 .our-work h2 {
@@ -686,18 +692,22 @@ header::after {
     overflow: hidden;
     position: relative;
     padding: 20px 0;
+    width: 100%;
+    box-sizing: border-box;
 }
 
 .work-slideshow {
     display: flex;
     transition: transform 0.5s ease-in-out;
     width: 100%;
+    flex-wrap: nowrap;
 }
 
 .work-slide {
     flex: 0 0 33.333%;
     padding: 0 10px;
     box-sizing: border-box;
+    min-width: 33.333%;
 }
 
 .work-slide img {
@@ -1145,13 +1155,6 @@ footer {
         border-radius: 8px;
     }
 
-    /* Better touch targets for navigation */
-    .nav-links a {
-        min-height: 36px;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-    }
 
     /* Some of our work Section Improvements for Mobile */
     .our-work {
@@ -1180,10 +1183,14 @@ footer {
 
     .service-item img {
         height: 180px;
+        width: 100%; /* Ensure the image fills the container */
+        object-fit: cover; /* Maintain aspect ratio and cover the space */
     }
 
     .client-item img {
         height: 250px;
+        width: 100%; /* Ensure the image fills the container */
+        object-fit: cover; /* Maintain aspect ratio and cover the space */
     }
 
     .contact-form input,
@@ -1191,50 +1198,71 @@ footer {
         font-size: 14px;
     }
 
-    /* Further minimize navigation for very small screens */
+    /* Navigation adjustments for small screens */
     nav ul {
-        justify-content: center; /* Center navigation on very small screens */
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 10px; /* Reduced space between li items */
+        list-style: none;
+        padding: 0;
+        margin: 0;
+        flex-wrap: wrap; /* Allow items to wrap if needed */
     }
-    
+
+    nav ul li {
+        display: flex;
+        padding: 3px 5px; /* Smaller padding to fit items in */
+        font-size: 12px; /* Slightly reduced font-size for mobile */
+        white-space: nowrap;
+        flex-shrink: 1; /* Allow items to shrink if necessary */
+    }
+
     nav ul li a {
-        font-size: 12px;
-        padding: 6px;
+        font-size: 11px; /* Adjust font-size for better mobile appearance */
+        padding: 4px 8px;
     }
 
+    /* Logo adjustments */
     .logo img {
-        height: 35px;
-        width: 35px;
+        height: 45px;
+        width: 45px;
     }
 
+    /* Sticky Button adjustments */
     #stickyButton {
         bottom: 12px;
-        right: 35px;
+        right: 20px; /* Adjusted to be more centered */
         padding: 5px 10px;
         font-size: 11px;
         min-width: 70px;
         max-width: 90px;
     }
-    
-    /* About Us Section for very small screens */
+
+    /* About Us Section adjustments */
     .about-text h2 {
-        font-size: 28px;
+        font-size: 26px; /* Slightly smaller font-size for better fit */
         margin-bottom: 15px;
     }
-    
+
     .about-image::before {
         width: 250px;
-        height: 300px;
+        height: 250px; /* Adjusted to keep balance */
     }
 
-    /* Some of our work Section for very small screens */
+    /* Work Slide Section adjustments */
     .work-slide {
         flex: 0 0 100%;
     }
 
     .work-slide img {
         height: 180px;
+        width: 100%; /* Ensure image width adapts to screen size */
+        object-fit: cover;
     }
 }
+
+
 
 /* iPhone 14 Specific Optimizations */
 @media screen and (max-width: 390px) {
@@ -1256,17 +1284,28 @@ footer {
     }
     
     nav ul {
+        display: flex;
         justify-content: center;
-        width: 100%;
-    }
-    
-    nav ul li {
-        margin: 0 3px;
-    }
+        align-items: center;
+       
+        list-style: none;
+        padding: 0;
+        margin: 0;
+        flex-wrap: nowrap; /* Force all items on one line */
+      }
+      
+      nav ul li {
+        display: inline-block;
+        padding: 5px 10px;
+        font-size: 14px;
+        white-space: nowrap;
+      }
+      
     
     nav ul li a {
         font-size: 12px;
-        padding: 8px 5px;
+   
+      
     }
     
     .logo img {
@@ -1304,6 +1343,97 @@ footer {
         height: 180px;
     }
 }
+
+
+/* Additional Small Screen Optimizations */
+@media screen and (max-width: 375px) {
+    header h1 {
+        font-size: 28px;
+    }
+
+    .service-item img {
+        height: 180px;
+        width: 100%; /* Ensure the image fills the container */
+        object-fit: cover; /* Maintain aspect ratio and cover the space */
+    }
+
+    .client-item img {
+        height: 250px;
+        width: 100%; /* Ensure the image fills the container */
+        object-fit: cover; /* Maintain aspect ratio and cover the space */
+    }
+
+    .contact-form input,
+    .contact-form textarea {
+        font-size: 14px;
+    }
+
+    /* Navigation adjustments for small screens */
+    nav ul {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 10px; /* Reduced space between li items */
+        list-style: none;
+        padding: 0;
+        margin: 0;
+        flex-wrap: wrap; /* Allow items to wrap if needed */
+    }
+
+    nav ul li {
+        display: flex;
+        padding: 3px 5px; /* Smaller padding to fit items in */
+        font-size: 12px; /* Slightly reduced font-size for mobile */
+        white-space: nowrap;
+        flex-shrink: 1; /* Allow items to shrink if necessary */
+    }
+
+    nav ul li a {
+        font-size: 11px; /* Adjust font-size for better mobile appearance */
+        padding: 4px 8px;
+    }
+
+    /* Logo adjustments */
+    .logo img {
+        height: 45px;
+        width: 45px;
+    }
+
+    /* Sticky Button adjustments */
+    #stickyButton {
+        bottom: 12px;
+        right: 20px; /* Adjusted to be more centered */
+        padding: 5px 10px;
+        font-size: 11px;
+        min-width: 70px;
+        max-width: 90px;
+    }
+
+    /* About Us Section adjustments */
+    .about-text h2 {
+        font-size: 26px; /* Slightly smaller font-size for better fit */
+        margin-bottom: 15px;
+    }
+
+    .about-image::before {
+        width: 250px;
+        height: 250px; /* Adjusted to keep balance */
+    }
+
+    /* Work Slide Section adjustments */
+    .work-slide {
+        flex: 0 0 100%;
+    }
+
+    .work-slide img {
+        height: 180px;
+        width: 100%; /* Ensure image width adapts to screen size */
+        object-fit: cover;
+    }
+}
+
+
+
 
 .top-bar .social-media a.icon {
     color: white;
