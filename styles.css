@@ -1435,6 +1435,93 @@ footer {
 
 
 
+/* Additional Small Screen Optimizations */
+@media screen and (max-width: 385px) {
+    header h1 {
+        font-size: 28px;
+    }
+
+    .service-item img {
+        height: 180px;
+        width: 100%; /* Ensure the image fills the container */
+        object-fit: cover; /* Maintain aspect ratio and cover the space */
+    }
+
+    .client-item img {
+        height: 250px;
+        width: 100%; /* Ensure the image fills the container */
+        object-fit: cover; /* Maintain aspect ratio and cover the space */
+    }
+
+    .contact-form input,
+    .contact-form textarea {
+        font-size: 14px;
+    }
+
+    /* Navigation adjustments for small screens */
+    nav ul {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 10px; /* Reduced space between li items */
+        list-style: none;
+        padding: 0;
+        margin: 0;
+        flex-wrap: wrap; /* Allow items to wrap if needed */
+    }
+
+    nav ul li {
+        display: flex;
+        padding: 3px 5px; /* Smaller padding to fit items in */
+        font-size: 12px; /* Slightly reduced font-size for mobile */
+        white-space: nowrap;
+        flex-shrink: 1; /* Allow items to shrink if necessary */
+    }
+
+    nav ul li a {
+        font-size: 11px; /* Adjust font-size for better mobile appearance */
+        padding: 4px 8px;
+    }
+
+    /* Logo adjustments */
+    .logo img {
+        height: 45px;
+        width: 45px;
+    }
+
+    /* Sticky Button adjustments */
+    #stickyButton {
+        bottom: 12px;
+        right: 20px; /* Adjusted to be more centered */
+        padding: 5px 10px;
+        font-size: 11px;
+        min-width: 70px;
+        max-width: 90px;
+    }
+
+    /* About Us Section adjustments */
+    .about-text h2 {
+        font-size: 26px; /* Slightly smaller font-size for better fit */
+        margin-bottom: 15px;
+    }
+
+    .about-image::before {
+        width: 250px;
+        height: 250px; /* Adjusted to keep balance */
+    }
+
+    /* Work Slide Section adjustments */
+    .work-slide {
+        flex: 0 0 100%;
+    }
+
+    .work-slide img {
+        height: 180px;
+        width: 100%; /* Ensure image width adapts to screen size */
+        object-fit: cover;
+    }
+}
+
 
 .top-bar .social-media a.icon {
     color: white;
