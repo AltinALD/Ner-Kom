@@ -668,7 +668,8 @@ header::after {
 /* Some of our work Section */
 .our-work {
     padding: 60px 20px;
-    background-color: #f9f9f9;
+    background-image
+    : url(photos/n2.jpg);
     text-align: center;
     width: 100%;
     box-sizing: border-box;

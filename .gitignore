@@ -1,0 +1,29 @@
+# Ignore Composer dependencies
+/vendor/
+
+# Ignore OS-specific files
+.DS_Store
+Thumbs.db
+
+# Ignore IDE/editor config files
+.vscode/
+.idea/
+*.sublime-project
+*.sublime-workspace
+
+# Ignore logs and temp files
+*.log
+*.tmp
+
+# Ignore environment config
+.env
+.env.local
+.env.*.local
+
+# Ignore PHPUnit test results
+.phpunit.result.cache
+
+# Ignore build artifacts
+/build/
+/dist/
+/node_modules/
