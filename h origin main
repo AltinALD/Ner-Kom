@@ -1,0 +1,77 @@
+[33mcommit 70cebdebc752336fe4b3ed7423b690bf5d65568b[m[33m ([m[1;36mHEAD[m[33m -> [m[1;32mmain[m[33m, [m[1;31morigin/main[m[33m)[m
+Author: AltinALD <ae30690@seeu.edu.mk>
+Date:   Mon Apr 7 01:37:55 2025 +0200
+
+    newnew
+
+[33mcommit 9eb42baafa88e92c9529c0da7cf83f3ac61ac5e7[m
+Author: AltinALD <ae30690@seeu.edu.mk>
+Date:   Mon Apr 7 01:31:44 2025 +0200
+
+    whatsap link
+
+[33mcommit bed8771197f4fef9e3341a3e78edc7001ea389df[m
+Author: AltinALD <ae30690@seeu.edu.mk>
+Date:   Mon Apr 7 01:18:16 2025 +0200
+
+    new slider for our works
+
+[33mcommit 4e4bacd94c3c59dd8951fb1f56cc015d1cbf5b95[m
+Author: AltinALD <ae30690@seeu.edu.mk>
+Date:   Mon Apr 7 01:03:45 2025 +0200
+
+    new phone style
+
+[33mcommit 86a5e65b513e7b2c040195d700fc8c10eb4c4bea[m
+Author: AltinALD <ae30690@seeu.edu.mk>
+Date:   Mon Apr 7 00:52:32 2025 +0200
+
+    Removed vendor from git, added .gitignore
+
+[33mcommit e1f4dc59ad548121c5ad1b18e919cb6769ebde18[m
+Author: AltinALD <ae30690@seeu.edu.mk>
+Date:   Mon Apr 7 00:48:36 2025 +0200
+
+    Add .gitignore and remove vendor from version control
+
+[33mcommit 76622015f2f0e058f13eced2d94d92394de12f8a[m
+Author: AltinALD <ae30690@seeu.edu.mk>
+Date:   Sun Apr 6 13:06:51 2025 +0200
+
+    Fix: renamed image files to lowercase for GitHub compatibility
+
+[33mcommit c75cb7f1c897438fd0dc2f2deff4304af51132cc[m
+Author: AltinALD <ae30690@seeu.edu.mk>
+Date:   Sun Apr 6 04:53:52 2025 +0200
+
+    Your commit message here
+
+[33mcommit b86e38a7b3cd4e2fd3888b02b5fb76cb098b8a75[m
+Author: AltinALD <ae30690@seeu.edu.mk>
+Date:   Sun Apr 6 02:34:58 2025 +0200
+
+    all new chnages
+
+[33mcommit 96a4bb9f7f2d3a09c9c017ad62d4735dafe29b83[m
+Author: AltinALD <ae30690@seeu.edu.mk>
+Date:   Sun Apr 6 02:03:28 2025 +0200
+
+    Updated homepage and styles
+
+[33mcommit 210ed18c0607cd801185175481c0f51b863057a6[m
+Author: AltinALD <ae30690@seeu.edu.mk>
+Date:   Sun Apr 6 01:46:31 2025 +0200
+
+    Updated homepage and styles
+
+[33mcommit b286c21c38f5889d2f79525e3c59f9567a9918a7[m
+Author: AltinALD <ae30690@seeu.edu.mk>
+Date:   Sun Apr 6 00:01:19 2025 +0200
+
+    Updated homepage and styles
+
+[33mcommit b4c685067d3bba295ddbbda4e036e553f273247b[m
+Author: AltinALD <ae30690@seeu.edu.mk>
+Date:   Sat Apr 5 19:54:24 2025 +0200
+
+    Initial commit
