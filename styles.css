@@ -827,8 +827,65 @@ footer {
     color: white;
     margin-top: 20px;
     font-size: 14px;
+    position: relative; /* For absolute positioning of footer-bottom */
 }
-  
+
+/* Footer Content */
+footer .footer-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start; /* Align items to the top */
+    flex-wrap: wrap;
+}
+
+/* Left side with contact info */
+footer .footer-left {
+    flex: 1;
+    text-align: left;
+}
+
+/* Centered copyright text */
+footer .footer-center {
+    flex: 1;
+    text-align: center;
+    margin-right: 500px;
+    margin-top: 100px;
+}
+
+/* Footer Bottom (Powered by ALDesigns Link) */
+footer .footer-bottom {
+    position: absolute;
+    bottom: 20px;
+    right: 20px; /* Align to the bottom-right corner */
+    padding-right: 20px; /* Space from the right edge */
+    width: auto;
+    text-align: right;
+}
+
+/* Styling for powered by ALDesigns link */
+footer .footer-bottom a {
+    color: white;
+    text-decoration: none;
+    font-size: 12px;
+}
+
+footer .footer-bottom a .ald {
+    color: black;
+}
+
+footer .footer-bottom a .designs {
+    color: red;
+}
+
+/* Footer Links and Styling */
+footer a {
+    color: #4CAF50;
+    text-decoration: none;
+}
+
+footer a:hover {
+    text-decoration: underline;
+}
 
 
 /* MObile*/
