@@ -668,7 +668,7 @@ header::after {
 /* Some of our work Section */
 .our-work {
     padding: 60px 20px;
-    background-image: url('/photos/n2.jpg');
+    background-image: url('photos/n2.jpg');
     text-align: center;
     width: 100%;
     box-sizing: border-box;
